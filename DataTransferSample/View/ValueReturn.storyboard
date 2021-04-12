@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y1C-Bz-bi1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Value Return View Controller-->
+        <scene sceneID="lEj-H8-JkO">
+            <objects>
+                <viewController id="y1C-Bz-bi1" customClass="ValueReturnViewController" customModule="DataTransferSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TRS-ub-KTF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="テキストを入力してください" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oqg-r1-oMD">
+                                <rect key="frame" x="20" y="184" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aD5-bc-594">
+                                <rect key="frame" x="157" y="358" width="100" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ViM-vT-0YW"/>
+                                    <constraint firstAttribute="width" constant="100" id="h9a-Lj-Od3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
+                                <state key="normal" title="値戻し">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="valueReturn:" destination="y1C-Bz-bi1" eventType="touchUpInside" id="pcf-Ia-ZSg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vf7-E4-bGO"/>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.93725490199999995" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Oqg-r1-oMD" firstAttribute="top" secondItem="vf7-E4-bGO" secondAttribute="top" constant="140" id="9bj-0R-rxe"/>
+                            <constraint firstItem="aD5-bc-594" firstAttribute="centerX" secondItem="TRS-ub-KTF" secondAttribute="centerX" id="Cuw-T7-x1K"/>
+                            <constraint firstItem="vf7-E4-bGO" firstAttribute="trailing" secondItem="Oqg-r1-oMD" secondAttribute="trailing" constant="20" id="N7g-H1-6af"/>
+                            <constraint firstItem="Oqg-r1-oMD" firstAttribute="leading" secondItem="vf7-E4-bGO" secondAttribute="leading" constant="20" id="jxu-tc-8nA"/>
+                            <constraint firstItem="aD5-bc-594" firstAttribute="top" secondItem="Oqg-r1-oMD" secondAttribute="bottom" constant="140" id="xmd-9G-rxT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="Oqg-r1-oMD" id="qln-G0-w3R"/>
+                        <outlet property="valueReturn" destination="aD5-bc-594" id="Z0g-gI-xAU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TWc-4c-bVG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="273.91304347826087" y="-210.26785714285714"/>
+        </scene>
+    </scenes>
+</document>

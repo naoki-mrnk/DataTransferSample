@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DataTransferSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="テキストを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2es-6c-qdY">
+                                <rect key="frame" x="20" y="244" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KN-wu-FDo">
+                                <rect key="frame" x="157" y="338" width="100" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="P4v-1z-tCv"/>
+                                    <constraint firstAttribute="height" constant="50" id="Xpm-9m-hfZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <state key="normal" title="値渡し">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="passByValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P4D-lJ-yjT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRp-Qy-Chj">
+                                <rect key="frame" x="157" y="628" width="100" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Jyj-Bn-62P"/>
+                                    <constraint firstAttribute="width" constant="100" id="ZUR-9K-khs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
+                                <state key="normal" title="次の画面へ">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="valueReturnPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wLq-Z6-m3Q"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="値が戻ってくるとここに表示されます" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVq-i5-sx2">
+                                <rect key="frame" x="20" y="488" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="IaW-I8-RTS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.93725490196078431" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="uVq-i5-sx2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3jE-go-Usm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2es-6c-qdY" secondAttribute="trailing" constant="20" id="3jl-s3-Lu7"/>
+                            <constraint firstItem="2es-6c-qdY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="4tw-ns-gWg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uVq-i5-sx2" secondAttribute="trailing" constant="20" id="Qbp-RS-YqW"/>
+                            <constraint firstItem="uVq-i5-sx2" firstAttribute="top" secondItem="8KN-wu-FDo" secondAttribute="bottom" constant="100" id="XHp-Om-Wce"/>
+                            <constraint firstItem="8KN-wu-FDo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eoa-Iy-DOH"/>
+                            <constraint firstItem="8KN-wu-FDo" firstAttribute="top" secondItem="2es-6c-qdY" secondAttribute="bottom" constant="60" id="f8G-IQ-dO2"/>
+                            <constraint firstItem="oRp-Qy-Chj" firstAttribute="top" secondItem="uVq-i5-sx2" secondAttribute="bottom" constant="100" id="kfb-au-SVo"/>
+                            <constraint firstItem="uVq-i5-sx2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kkY-ce-zln"/>
+                            <constraint firstItem="oRp-Qy-Chj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m0j-15-fEP"/>
+                            <constraint firstItem="2es-6c-qdY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mA5-nn-NP6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="displayCatchData" destination="uVq-i5-sx2" id="JRZ-x9-UlG"/>
+                        <outlet property="passByValue" destination="8KN-wu-FDo" id="WaH-kC-SrC"/>
+                        <outlet property="textField" destination="2es-6c-qdY" id="0UD-zx-8Bx"/>
+                        <outlet property="valueReturn" destination="oRp-Qy-Chj" id="ko4-4d-HpZ"/>
+                        <segue destination="avW-lg-9bq" kind="presentation" identifier="toNext" id="SyJ-JK-mfW"/>
+                        <segue destination="FoR-bh-O4B" kind="show" identifier="toValueReturn" id="Xvv-kw-yE9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="88.392857142857139"/>
+        </scene>
+        <!--ValueReturn-->
+        <scene sceneID="9R3-h0-7gx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ValueReturn" id="FoR-bh-O4B" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cnV-uo-htE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fj3-Lj-pq6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="813" y="380"/>
+        </scene>
+        <!--NextView-->
+        <scene sceneID="pbR-0x-wmz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NextView" id="avW-lg-9bq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CDD-MA-7W2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="801" y="-203"/>
+        </scene>
+    </scenes>
+</document>
