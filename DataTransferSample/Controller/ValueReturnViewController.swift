@@ -23,6 +23,7 @@ class ValueReturnViewController: UIViewController {
         valueReturn.settingButton()
     }
     
+    // TextFieldからTextを取得して前の画面に渡す
     @IBAction func valueReturn(_ sender: Any) {
         // TextFieldからtextを取得
         backString = textField.text!
@@ -31,7 +32,6 @@ class ValueReturnViewController: UIViewController {
         // 前の画面に戻る
         dismiss(animated: true, completion: nil)
     }
-    
 }
 
 protocol CatchProtocol {

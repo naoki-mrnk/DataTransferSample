@@ -26,12 +26,13 @@ class ViewController: UIViewController, CatchProtocol {
         passByValue.settingButton()
         valueReturn.settingButton()
     }
-
     
+    // 値を次の画面に渡す
     @IBAction func passByValue(_ sender: Any) {
         performSegue(withIdentifier: "toNext", sender: nil)
     }
     
+    // ValueReturnVCに画面遷移
     @IBAction func valueReturnPage(_ sender: Any) {
         performSegue(withIdentifier: "toValueReturn", sender: nil)
     }

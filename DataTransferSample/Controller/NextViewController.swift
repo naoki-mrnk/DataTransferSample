@@ -8,7 +8,7 @@
 import UIKit
 
 class NextViewController: UIViewController {
-
+    
     /// 前の画面から受け取ったTextを表示するLabel
     @IBOutlet weak var displayDataLabel: UILabel!
     /// 前の画面に戻るButton
@@ -22,6 +22,7 @@ class NextViewController: UIViewController {
         backToMain.settingButton()
     }
     
+    // 前の画面に戻る
     @IBAction func backToMain(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
